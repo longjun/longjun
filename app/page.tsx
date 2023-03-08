@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { allPosts } from "contentlayer/generated"
 
 export default function Home() {
   return (
@@ -6,6 +7,9 @@ export default function Home() {
       <div className="text-center">
         <h1>Hello!</h1>
         <p>Next.js, TailwindCSS, Contentlayer</p>
+        {allPosts.map(p=>(
+          <div className="h1">{p.title}</div>
+        ))}
       </div>
     </main>
   )

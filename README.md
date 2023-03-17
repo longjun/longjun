@@ -13,7 +13,7 @@ A Next.js starter that includes all you need to build amazing projects.
 Node.js v16.18+.
 
 ```bash
-git clone https://github.com/longjun/longjun.wang
+git clone https://github.com/longjun/longjun.wang.git
 cd longjun.wang
 pnpm install
 pnpm dev

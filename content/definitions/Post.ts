@@ -8,12 +8,16 @@ export const Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     publishedAt: { type: "string", required: true },
     summary: { type: "string" },
+    image: { type: "string" },
     status: { type: "enum", options: ["draft", "published"], required: true },
   },
 	computedFields: {
     slug: {
-      type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath,
+      type: "string",
+      resolve: (doc) =>
+        doc._raw.sourceFileName
+          // hello-world.mdx => hello-world
+          .replace(/\.mdx$/, ""),
     },
   },
 }))

@@ -18,10 +18,10 @@ export default async function Blog({ params }) {
   return (
     <section>
       <header className="text-center mb-10">
-        <h1 className="font-bold text-3xl">
+        <h1 className="font-bold text-3xl mb-3">
           {post.title}
         </h1>
-        <span className="text-gray-500">
+        <span className="text-gray-400">
           {post.publishedAt}
         </span>
       </header>

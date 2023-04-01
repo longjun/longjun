@@ -17,7 +17,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <article className="prose prose-pre:bg-gray-100">
+    <article className="prose prose-neutral prose-pre:bg-gray-100">
       <Component components={{ ...components }} />
     </article>
   );
